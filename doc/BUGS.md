@@ -8,3 +8,8 @@ testInsertMoney_zeroValue_noIncrease()
 insertMoney is checking if value <1
 I saw that it was throwing an exception and saw where the exception was being thrown
 I changed it to <0 as that is the opposite of >=0, as the documentation describes.
+3. testGetPriceZero isnt true
+testGetPriceZero
+testGetPriceZero isnt using the right item
+I saw that it was using item1 instead of item2
+I changed it to use the right item

@@ -26,7 +26,7 @@ public class VendingMachineItemTest {
     }
     @Test
     void testGetPriceZero() {
-        double actualValue=item1.getPrice();
+        double actualValue=item2.getPrice();
         assertEquals(0.0, actualValue,0.001);
     }
     @Test
