@@ -13,3 +13,7 @@ testGetPriceZero
 testGetPriceZero isnt using the right item
 I saw that it was using item1 instead of item2
 I changed it to use the right item
+4. (Injected fault) removeItem wasn't removing items
+testMakePurchase_enoughMoney_removeItem, testRemoveItem_validItem_removesItem
+java.lang.AssertionError: expected null, but was:[VendingMachineItem@a514af7]
+This test detected the fault because it was checking to make sure that the items were removed from removeItem

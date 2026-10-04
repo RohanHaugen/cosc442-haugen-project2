@@ -141,7 +141,8 @@ public class VendingMachine {
 	public VendingMachineItem removeItem(String code) throws VendingMachineException {
 		int slotIndex = getSlotIndex(code);
 		VendingMachineItem item = itemArray[slotIndex];
-		itemArray[slotIndex] = null;
+		//INJECTED FAULT FOR TEST VALIDATION
+		//Removing itemArray[slotIndex] = null;
 		if (item == null) {
 			throw new VendingMachineException(SLOT_MESSAGE + code + IS_EMPTY_MESSAGE);
 		}
