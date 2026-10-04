@@ -41,9 +41,9 @@ public class VendingMachineTest {
     }
     @Test 
     void testAddItem_doesntAdd_filledItem(){
-        vendingMachine1.addItem(item1, "A");
+        vendingMachine1.addItem(item1, "B");
         assertThrows(VendingMachineException.class, () -> {
-            vendingMachine1.addItem(item2, "A");
+            vendingMachine1.addItem(item2, "B");
         });
     }
     @Test
@@ -72,8 +72,8 @@ public class VendingMachineTest {
         "A,A, 10.0, 0.0, true",
         "A,A, 0.0, 0.0, false",
         "A,A, 5.0, 5.0, false",
-        "A,A, 10.5, 0.5, true",
-        "A,B, 20.0, 20.0, false"
+        "C,C, 10.5, 0.5, true",
+        "A,D, 20.0, 20.0, false"
     })
     void testMakePurchase(String a, String e, double b, double c, boolean d){
         vendingMachine1.insertMoney(b);
